@@ -7,7 +7,7 @@ const busSeats = document.querySelectorAll('.seat-button');
 const seatBookCount = document.getElementById('seat-select');
 const seatLeftCount = document.getElementById('seat-left');
 let seatCount = 0;
-let leftCount = 40;
+let leftCount = 20;
 for (const seat of busSeats) {
     seat.addEventListener('click', function selected(e) {
         if (seatCount < 4) {
@@ -50,13 +50,15 @@ function couponApply() {
     const couponInput = document.getElementById("input-coupon");
     const couponInputText = couponInput.value;
     if (seatCount >= 4) {
+        const btn = document.getElementById("button");
+        btn.removeAttribute("disabled")
         const discountedDiv = document.getElementById("discounted-div");
         const applyBtn = document.getElementById("apply-btn")
         if (couponInputText === "NEW15") {
             const discountAmount = document.getElementById("total-price").innerText * (15 / 100);
             const newDiv = document.createElement("div");
             newDiv.style.display = "flex"
-            newDiv.style.justifyContent ="space-between"
+            newDiv.style.justifyContent = "space-between"
             newDiv.style.padding = "15px"
             const p = document.createElement("p");
             const p2 = document.createElement("p");
@@ -73,7 +75,7 @@ function couponApply() {
             const discountAmount = document.getElementById("total-price").innerText * (20 / 100);
             const newDiv = document.createElement("div");
             newDiv.style.display = "flex"
-            newDiv.style.justifyContent ="space-between"
+            newDiv.style.justifyContent = "space-between"
             newDiv.style.padding = "15px"
             const p = document.createElement("p");
             const p2 = document.createElement("p");
