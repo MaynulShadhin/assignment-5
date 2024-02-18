@@ -290,14 +290,17 @@
                                 </table>
 
                             </div>
-                            <div
-                                class="flex items-center justify-between w-full p-4 font-inter border-t-2 border-[#03071233]">
-                                <p>Total Price</p>
-                                <p>BDT <span id="total-price">0</span></p>
+                            <div id="discounted-div">
+                                <div
+                                    class="flex items-center justify-between w-full p-4 font-inter border-t-2 border-[#03071233]">
+                                    <p>Total Price</p>
+                                    <p>BDT <span id="total-price">0</span></p>
+                                </div>
                             </div>
-                            <label class="input input-bordered flex items-center gap-2">
-                                <input type="text" class="grow" placeholder="Have any coupon?" />
-                                <button class="px-6 py-2 bg-[#1DD100] text-white rounded-lg">Apply</button>
+                            <label id="apply-btn" class="input input-bordered flex items-center gap-2">
+                                <input id="input-coupon" type="text" class="grow" placeholder="Have any coupon?" />
+                                <button onclick="couponApply()"
+                                    class="px-6 py-2 bg-[#1DD100] text-white rounded-lg">Apply</button>
                             </label>
                             <div class="flex items-center justify-between w-full p-4 font-inter">
                                 <p>Grand Total</p>
@@ -317,7 +320,7 @@
                                 <div class="label">
                                     <span class="font-bold label-text">Phone Number*</span>
                                 </div>
-                                <input type="text" placeholder="Enter Your Phone Number"
+                                <input id="phone-input" type="text" placeholder="Enter Your Phone Number"
                                     class="input input-bordered w-full max-w-xs" />
                             </label>
                             <label class="form-control w-full max-w-xs">
@@ -348,7 +351,8 @@
             <div class="container mx-auto w-5/6 flex justify-between p-20 border-b-2 border-dashed border-[#FFFFFF4D]">
                 <aside class="space-y-4">
                     <a class="text-4xl font-extrabold">P-Ticket</a>
-                    <p class="text-[#FFFFFFCC]">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                    <p class="text-[#FFFFFFCC]">P-Ticket is a digital platform to make your <br> daily commuting better.
+                    </p>
                 </aside>
                 <nav class="space-y-4">
                     <h6 class="footer-title text-white">Download Our App</h6>
