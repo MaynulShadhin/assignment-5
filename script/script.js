@@ -50,8 +50,6 @@ function couponApply() {
     const couponInput = document.getElementById("input-coupon");
     const couponInputText = couponInput.value;
     if (seatCount >= 4) {
-        const btn = document.getElementById("button");
-        btn.removeAttribute("disabled")
         const discountedDiv = document.getElementById("discounted-div");
         const applyBtn = document.getElementById("apply-btn")
         if (couponInputText === "NEW15") {
