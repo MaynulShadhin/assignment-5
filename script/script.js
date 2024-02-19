@@ -41,6 +41,7 @@ for (const seat of busSeats) {
             const btn = document.getElementById("button")
             if(seatCount === 4){
                 btn.disabled = false;
+                btn.style.backgroundColor = "#1DD100"
             }
             for(const seat of busSeats){
                 seat.removeEventListener('click', selected);
