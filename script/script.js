@@ -68,6 +68,7 @@ function couponApply() {
             applyBtn.style.display = "none"
             const newGrandTotal = document.getElementById('grand-total');
             newGrandTotal.innerText = document.getElementById("total-price").innerText - discountAmount;
+            const newGrandTotalFixed = parseInt(newGrandTotal.innerText);
         }
         else if (couponInputText === "Couple 20") {
             const discountAmount = document.getElementById("total-price").innerText * (20 / 100);
@@ -85,6 +86,7 @@ function couponApply() {
             applyBtn.style.display = "none"
             const newGrandTotal = document.getElementById('grand-total');
             newGrandTotal.innerText = document.getElementById("total-price").innerText - discountAmount;
+            const newGrandTotalFixed = parseInt(newGrandTotal.innerText);
         }
         else {
             alert("Invalid Coupon Code")
