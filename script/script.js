@@ -6,6 +6,7 @@ function seatBooking() {
 const busSeats = document.querySelectorAll('.seat-button');
 const seatBookCount = document.getElementById('seat-select');
 const seatLeftCount = document.getElementById('seat-left');
+const btn = document.getElementById("button");
 let seatCount = 0;
 let leftCount = 20;
 for (const seat of busSeats) {
@@ -37,7 +38,13 @@ for (const seat of busSeats) {
             const grandTotal = document.getElementById("grand-total").innerText;
             const convertedGrandTotal = parseInt(grandTotal);
             document.getElementById("grand-total").innerText = convertedGrandTotal + parseInt(price);
-            seat.removeEventListener('click', selected);
+            const btn = document.getElementById("button")
+            if(seatCount === 4){
+                btn.disabled = false;
+            }
+            for(const seat of busSeats){
+                seat.removeEventListener('click', selected);
+            }
         }
         else {
             alert("You can not choose more than 4 tickets");
